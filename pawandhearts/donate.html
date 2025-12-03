@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Latisha Joe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Paws and Hearts Animal Shelter - Adopt</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <header>
+        <h1>Paws and Hearts Animal Shelter</h1>
+        <p>Donation Page</p>
+
+        <nav>
+            <a href="index.html">
+                <img src="images.jpg" alt="Paws and Hearts Animal Shelter Logo" width="80">
+            </a>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="adopt.html">Adopt</a></li>
+               <li><a href="volunteer.html">Volunteer</a></li>
+               <li><a href="donate.html">Donate</a></li>
+               <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Help Us Save More Animals</h2>
+            <p>Your donation supports food, medical care, and safe housing for animals in need.</p>
+        </section>
+
+        <section>
+            <h3>How Donations Are Used</h3>
+            <ul>
+                <li>Medical treatments and vaccinations</li>
+                <li>Spay/Neuter programs</li>
+                <li>Food, toys, and bedding</li>
+                <li>Maintenance of our shelter facilities</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Donation Form</h3>
+            <form action="#" method="post">
+                <label for="donation-amount">Amount ($):</label>
+                <input type="number" id="donation-amount" name="amount" min="1" required>
+
+                <fieldset>
+                    <legend>Frequency</legend>
+                    <label>
+                        <input type="radio" name="frequency" value="one-time" checked>
+                        One-time
+                    </label>
+
+                    <label>
+                         <input type="radio" name="frequency" value="monthly" checked>
+                        Monthly
+                    </label>
+
+                     <label>
+                         <input type="radio" name="frequency" value="yearly" checked>
+                        Yearly
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment Info</legend>
+
+                    <label for="card-name">Name on Card:</label>
+                    <input type="text" id="card-name" name="card-name" required>
+
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" required>
+
+                    <label for="card-number">Expiration (MM/YY):</label>
+                    <input type="text" id="card-exp" name="card-exp" required>
+
+                    <label for="card-number">CVV:</label>
+                    <input type="text" id="card-cvv" name="card-cvv" required>
+                </fieldset>
+                <button type="submit">Donate Now</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Photos of Happy Doantions</h3>
+
+            <img src="images.jpg" alt="Happy adopter with dog" width="250">
+            <img src="images.jpg" alt="Family with adopted pets" width="250">
+            <img src="images.jpg" alt="Shelter staff with animals" width="250">
+        </section>
+    </main>
+
+       <footer>
+        <p>Copyright &copy; 2025 - GIT480 Paws and Hearts Animal Shelter, Phoenix AZ, 85015, join us on IG and TikTok @PawsandHearts </p>
+    </footer>
+  </body>
+</html>
