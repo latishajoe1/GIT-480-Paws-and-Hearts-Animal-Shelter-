@@ -13,109 +13,103 @@
 
     <header>
         <h1>Paws and Hearts Animal Shelter</h1>
+        <p>Home Page</p>
          
         <nav>
-            <a href="#home" class="logo">LOGO</a> 
+            <a href="index.html">
+            <img src="images/logo.jpg" alt="Paws and Hearts Animal Shelter Logo" width=""80>
+            </a>  
+
             <ul>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Adopt</a></li>
-               <li><a href="#">Volunteer</a></li>
-               <li><a href="#">Donate</a></li>
-               <li><a href="#">Contact</a></li>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="adopt.html">Adopt</a></li>
+               <li><a href="volunteer.html">Volunteer</a></li>
+               <li><a href="donate.html">Donate</a></li>
+               <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header> 
 
-    <section id="home">
-        <div class="page-title">Home Page</div>
+    <main>
 
-        <div class="hero">
-            <p><strong>Hero Image:</strong> Person + Pet</p>
-            <h2>Find Your New Best Friend</h2>
-            <a href="#adopt">Adoption Button</a>
-        </div>
+    <section id="hero">
+        <figure>
+            <img src="images/hero.jpg" alt="Person with pet" width="600">
+            <figcaption>Hero Image: Person + Pet</figcaption>
+        </figure>
+         
+        <h2>Find Your New Best Friend</h2>
+        <p>Adopt a loving animal from Paws and Hearts Animal Shelter.</p>
+        <p>
+            <a href="adopt.html">Adoption Button</a>
+        </p>
+    </section>
 
-        <div class="home-buttons">
-            <button>Adopt</button>
-            <button>Volunteer</button>
-            <button>Donate</button>
-        </div>
+    <section id="featured-animals">
+        <h2>Featured Animals Carousel</h2>
 
-        <h3>Featured Animals Carousel</h3>
-        <p>Photo / Name / Age/ Meet Me Button</p>
+        <article>
+            <img src="images/feat.jpg" alt="Featured animal 1" width="200">
+            <p>Name: Bella</p>
+            <p>Age: 2 years old</p>
+            <p><a href="adopt.html">Meet Me</a></p>
+        </article>
 
-        <h3>Upcoming Events (Calendar)</h3>
+        <article>
+            <img src="images/feat.jpg" alt="Featured animal 2" width="200">
+            <p>Name: Max</p>
+            <p>Age: 3 years old</p>
+            <p><a href="adopt.html">Meet Me</a></p>
+        </article>
+
+        <article>
+            <img src="images/feat.jpg" alt="Featured animal 3" width="200">
+            <p>Name: Luna</p>
+            <p>Age: 1 years old</p>
+            <p><a href="adopt.html">Meet Me</a></p>
+        </article>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events (Calendar)</h2>
         <ul>
-            <li>Event 1</li>
-            <li>Event 2</li>
-            <li>Event 3</li>
-        </ul>
-
-        <h3>Success Stories</h3>
-        <p>Photos and Quotes</p>
+            <li>Nov 28 - Adoption Fair</li>
+            <li>Dec 5 - Holiday Donation Drive</li>
+            <li>Dec 12 - Volunteer Orientation</li>
+        </ul>      
     </section>
 
-    <section id="adopt">
-        <div class="page-title">Adoption Page</div>
+    <section id="success-stories">
+        <h2>Success Stories</h2>
 
-        <h3>Search Bar + Filters</h3>
-        <p>Cats / Dogs / Size / Age </p>
+        <article>
+            <img src="images.jpg" alt="Adopter with new dog" width="250">
+            <blockquote>"We found our new best friend at Paws and Hearts!"</blockquote>
+            <p>-Happy Adopter</p>
+        </article>
 
-        <h3>Animal Grid (3 per row)</h3>
-        <p>Photo / Name / Info / Button to click on</p>
+        <article>
+            <img src="images.jpg" alt="Family with adopted cat" width="250">
+            <blockquote>"Our adopted cat has brought so much joy into our home!"</blockquote>
+            <p>-Another Happy Adopter</p>
+        </article>
     </section>
 
-    <section id="donate">
-        <div class="page-title">Donation Page</div>
-
-        <h3>Help Us Save More Animals</h3>
-        <p>How donations are used</p>
-
-        <h3> Donation forms</h3>
-        <p> Amount , frequency, payment info </p>
-
-        <h3>Photos of Happy donations</h3>
-        <p>photo set here</p>
-    </section>
-
-    <section id="volunteer">
-        <div class="page-title">Volunteer Page</div>
-
-        <h3>Join our team of animal lovers</h3>
-        <p>volunteer opportunities information</p>
-
-        <h3>Sign up form</h3>
-        <p>name, contact, interest area</p>
-
-        <h3>Shelter Missions</h3>
-        <p>mission info here</p>
-    </section>
-
-    <section id="contact">
-        <div class="page-title">Contact Page</div>
-
-        <h3>Get in touch </h3>
-
-        <h3>Contact Form</h3>
-        <p>name, email, message</p>
-
-        <h3>map, location section</h3>
-        <p>map placeholder</p>
-
-        <h3>Operating Hours</h3>
-        <ul>
-            <li>Mon-Fri: 10 - 6</li>
-            <li>Sat: 11 - 5</li>
-            <li>Sun: Closed</li>
-        </ul>
-    </section>
+    </main>
+    
+   <footer>
+        <p>Copyright &copy; 2025 - GIT480 Paws and Hearts Animal Shelter, Phoenix AZ, 85015, join us on IG and TikTok @PawsandHearts </p>
+    </footer>
+  </body>
+</html>
 
 
 
 
 
 
-    <div id="particleBackground"></div>
+
+    <!-- <div id="particleBackground"></div>
     <main id="main-content">
         <article>
             <h2>Featured Animals Carousel</h2>
@@ -160,12 +154,5 @@
                 </fieldset>
 
                 <input type="submit" value="Submit">
-            </form>
+            </form> -->
 
-        </article>
-    </main>
-    <footer>
-        <p>Copyright &copy; 2025 - GIT480 Paws and Hearts Animal Shelter, Phoenix AZ, 85015, join us on IG and TikTok @PawsandHearts </p>
-    </footer>
-  </body>
-</html>
