@@ -1,0 +1,481 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------- BEGIN CUSTOM STYLES ---------- */
+
+:root {
+	--turquoise: #2fb8b8;
+	--turquoise-soft: #d4f7f7;
+	--dark-yellow: #f2e017;
+	--dark-orange: #e77431;
+	--brown: #5b3b21;
+	--brown-soft: #cbaa90; 
+	--white: #ffffff;
+	--light-red: #f7a7a7;
+	--light-red-soft: #fde5e5;
+
+	--radius-card: 12px;
+	--shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: var(--brown);
+	background: linear-gradient(
+		180deg,
+		#fff 0%
+		var(--turquoise-soft) 35%,
+		#fff 100%
+	);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 10px;
+}
+
+main {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 1.5rem 1rem 3rem;
+}
+
+header {
+	background: var(--turquoise);
+	color: var(--brown);
+	border-bottom: 4px solid var(--dark-orange);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+header > h1,
+header > p {
+	margin: 0;
+	padding: 0.25rem 1rem;
+}
+
+header > h1 {
+	font-size: 1.6rem;
+	font-weight: 800;
+}
+
+header > p {
+	font-size: 0.9rem;
+	opacity: 0.85;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	padding: 0.75rem 1rem 1rem;
+}
+
+nav a img {
+	border-radius: 999px;
+	border: 3px solid var(--white);
+	background: var(--white);
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1.25rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin: 0;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--brown);
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+nav ul li a {
+	position: relative;
+	padding: 0.25rem 0.3rem;
+}
+
+nav ul li a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -0.15rem;
+	height: 3px;
+	border-radius: 999px;
+	background: transparent;
+	transition: background 0.2s ease-out, transform 0.2s ease-out;
+	transform: scale(0.2);
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus-visible::after {
+	background: var(--dark-orange);
+	transform: scaleX(1);
+}
+
+h2 {
+	font-size: 1.6rem;
+	margin: 0 0 0.75rem;
+	color: var(--brown);
+}
+
+h3 {
+	font-size: 1.2rem;
+	margin: 1.5rem 0 0.4rem;
+	color: var(--brown-soft);
+}
+
+p {
+	line-height: 1.6;
+}
+
+section {
+	margin: 2rem 0;
+	padding: 1.5rem 1.25rem;
+	background: var(--white);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-soft);
+}
+
+main > section:first-of-type {
+	border-top: 6px solid var(--dark-yellow);
+}
+
+.page-title {
+	display: inline-block;
+	padding: 0.3rem 0.7rem;
+	border-radius: 999px;
+	background: var(--light-red);
+	color: var(--brown);
+	font-weight: 700;
+	font-size: 0.95rem;
+	margin-bottom: 0/75rem;
+}
+
+button, 
+a.button,
+input[type="submit"] {
+	cursor: pointer;
+	border: none;
+	border-radius: 999px;
+	padding: 0.55rem 1.4rem;
+	font-size: 0.95rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	background: var(--dark-orange);
+	color: var(--white);
+	box-shadow: 0 3px 0 rgba(120, 60, 20, 0.5);
+	transition: transform 0.1s ease-out, box-shadow 0.1s ease-out,
+	    background 0.15s ease-out;
+}
+
+button:hover,
+a.button:hover,
+input[type="submit"]:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 0 rgba(120, 60, 20, 0.45); 
+	background: #f0863d; 
+}
+
+button:active,
+a.button:active,
+input[type="submit"]:active {
+	transform: translateY(1px);
+	box-shadow: 0 1px 0 rgba(120, 60, 20, 0.6); 
+}
+
+nav ul li a,
+nav > a {
+	font-weight: 700;
+}
+
+a[href$="html"]:not(nav a) {
+	color: var(--dark-orange);
+	font-weight: 600;
+}
+
+#hero {
+	display: grid;
+	gap: 1.2rem;
+}
+
+#hero figure {
+	margin: 0;
+	background: var(--turquoise-soft);
+	padding: 0.75rem;
+	border-radius: var(--radius-card);
+}
+
+#hero figcaption {
+	font-size: 0.8rem;
+	opacity: 0.75;
+	margin-top: 0.35rem;
+}
+
+#hero h2 {
+	margin-top: 0.5rem;
+}
+
+#hero p {
+	margin-bottom: 0.75rem;
+}
+
+[aria-label="Main actions"] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: flex-start;
+}
+
+#featured-animals {
+	display: grid;
+	gap: 1rem;
+}
+
+#featured-animals article {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 2fr;
+	gap: 0.75rem;
+	align-items: center;
+	padding: 0.75rem;
+	background: #fffdf5;
+	border-radius: var(--radius-card);
+	border: 1px dashed rgba(203, 165, 54, 0.6);
+}
+
+#featured-animals article p {
+	margin: 0.1rem 0;
+}
+
+#events ul {
+	margin: 0.5rem 0 0;
+	padding-left: 1.2rem;
+}
+
+#events li {
+	margin-bottom: 0.3rem;
+	padding: 0.3rem 0.5rem;
+	border-radius: 999px;
+	background: var(--turquoise-soft);
+}
+
+#success-stories article {
+	display: grid;
+	grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+	gap: 1rem;
+	align-items: center;
+	padding: 0.75rem;
+	border-radius: var(--radius-card);
+	background: var(--light-red-soft);
+}
+
+#success-stories blockquote {
+	margin: 0 0 0.4rem;
+	font-style: italic;
+}
+
+main form {
+	display: grid;
+	gap: 0.6rem;
+	margin-top: 0.5rem;
+}
+
+label {
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="emial"],
+textarea,
+select {
+	font-family: inherit;
+	font-size: 0.95rem;
+	padding: 0.45rem 0.6rem;
+	border-radius: 999px;
+	border: 1px solid rgba(91, 59, 33, 0.4);
+	outline: none;
+	transition: border-color 0.15s ease-out, box-shadow 0.15a ease-out;
+}
+
+textarea {
+	border-radius: 12px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: var(--turquoise);
+	box-shadow: 0 0 0 3px rgba(47, 184, 184, 0.25);
+}
+
+fieldset {
+	border: 2px dashed rgba(91, 59, 33, 0.3);
+	border-radius: 12px;
+	padding: 0.75rem 0.9rem 0.9rem;
+}
+
+legend {
+	padding: 0 0.3rem;
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+section:nth-of-type(2) article {
+	background: #fffdf8;
+	border-radius: var(--radius-card);
+	padding: 0.75rem;
+	box-shadow: var(--shadow-soft);
+}
+
+section:nth-of-type(2) article h3 {
+	margin-top: 0.4rem;
+}
+
+#donation-amount {
+	max-width: 180px;
+}
+
+fieldset legend {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	margin-right: 0.75rem;
+	margin-top: 0.35rem;
+}
+
+form fieldset:last-of-type {
+	display: grid;
+	gap: 0.5rem;
+}
+
+main section:last-of-type img {
+	display: inline-block;
+	margin-right: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+img[alt*="Volunteers"],
+img[alt*="Volunteers caring for animals"],
+img[alt*="Volunteer-team"] {
+	border: 3px solid var(--turquoise);
+}
+
+textarea#contact-message {
+	min-height: 150px;
+}
+
+section h3 + img[alt*="Map"] {
+	border-radius: 16px;
+	border: 3px solid var(--dark-yellow);
+}
+
+section ul {
+	margin: 0.5rem 0 0;
+}
+
+footer {
+	padding: 1rem;
+	text-align: center;
+	font-size: 0.85rem;
+	background: var(--brown);
+	color: var(--white);
+	margin-top: 2rem;
+}
+
+@media (min-width: 720px) {
+	#hero {
+		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.5fr);
+		align-items: center;
+	}
+
+	#featured-animals {
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	}
+
+	#featured-animals article {
+	grid-template-columns: 1fr;
+	}
+
+	#success-stories article {
+		grid-template-columns: 220px minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 640px) {
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	nav ul {
+		gap: 0.4rem 0.75rem;
+	}
+
+	section {
+		padding: 1.2rem 1rem;
+	}
+}
