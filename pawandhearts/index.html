@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Paws and Hearts Animal Shelter</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   </head>
 
   <body>
-    <a href="#main-content" id="skipLink">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
         <h1>Paws and Hearts Animal Shelter</h1>
-        <p>Home Page</p>
          
         <nav>
             <a href="index.html">
@@ -30,7 +30,8 @@
         </nav>
     </header> 
 
-    <main>
+    
+    <main id="main-content">
 
     <section id="hero">
         <figure>
@@ -48,6 +49,7 @@
     <section id="featured-animals">
         <h2>Featured Animals</h2>
 
+     <div class="animal-grid">
         <article>
             <img src="images/animal-1.jpg" alt="Featured animal 1" width="200">
             <p>Name: Bella</p>
@@ -68,6 +70,7 @@
             <p>Age: 1 years old</p>
             <p><a href="adopt.html">Meet Me</a></p>
         </article>
+     </div>
     </section>
 
     <section id="events">
